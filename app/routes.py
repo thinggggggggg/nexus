@@ -23,7 +23,7 @@ def home():
 
 @app.route('/login')
 def login():
-    form = LoginForm()
+    form = LoginForm()  # currently uses flask stuff but ngl looks bad so gonna fix
     return render_template('login.html', title='Sign In', form=form)
 
 @app.route('/messages')
