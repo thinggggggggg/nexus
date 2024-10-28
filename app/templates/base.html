@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <!-- importing google fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        
+        <!-- importing css style sheet -->
         <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+
         {% if title %}
         <title>{{ title }} - Nexus</title>
         {% else %}
-        <title>Nexus - Private Messaging</title>
+        <title>Nexus - Private Messaging</title> <!-- default title if no other is given in routes.py-->
         {% endif %}
     </head>
     <body>
-        <div>Nexus: <a href="/home">Home</a></div>
-        <div>Bumsack</div>
-        <hr>
+        <div>
+            <!-- nav bar at top -->
+            Nexus: 
+            <a href="/home">Home</a>
+            <a href="/login">Sign In</a>
+        </div>
+        <hr> <!-- divider line -->
         {% block content %}{% endblock %}
     </body>
 </html>

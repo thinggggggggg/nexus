@@ -1,11 +1,9 @@
 from flask import render_template
 from app import app
+from app.forms import LoginForm
 
-@app.route('/')
-@app.route('/home')
-def home():
-    user = {'username': 'willy'}
-    posts = [
+USER = {'username': 'willy'}
+MESSAGES = [
         {
             'author': {'username': 'John'},
             'body': 'Beautiful day in Portland!'
@@ -15,4 +13,19 @@ def home():
             'body': 'The Avengers movie was so cool!'
         }
     ]
-    return render_template('home.html', title='Home', user=user, posts=posts)
+
+@app.route('/')
+@app.route('/home')
+def home():
+    user = USER
+    messages = MESSAGES
+    return render_template('home.html', title='Home', user=user, messages=messages)
+
+@app.route('/login')
+def login():
+    form = LoginForm()
+    return render_template('login.html', title='Sign In', form=form)
+
+@app.route('/messages')
+def messages():
+    user = USER

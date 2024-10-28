@@ -1,8 +1,8 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 id="header" style="font-size: 6vw">Hi, {{ user.username }}!</h1>
-    {% for post in posts %}
-    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    <h1 id="header" style="font-size: 6vw">Hi, {{ user.username }}!</h1> <!-- header message -->
+    {% for message in messages %}
+    <div><p>{{ message.author.username }} says: <b>{{ message.body }}</b></p></div> <!-- displaying all messages -->
     {% endfor %}
 {% endblock %}
