@@ -2,7 +2,7 @@ from flask import render_template
 from app import app
 
 @app.route('/')
-@app.route('/index')
-def index():
+@app.route('/home')
+def home():
     user = {'username': 'willy'}
-    return render_template('index.html', title='Home', user=user)
+    return render_template('home.html', title='Home', user=user)
