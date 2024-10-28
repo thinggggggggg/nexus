@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        {% if title %}
-        <title>{{ title }} - Nexus</title>
-        {% else %}
-        <title>Nexus - Private Messaging</title>
-        {% endif %}
-    </head>
-    <body>
-        <h1>Nexus - The Next Generation of Private Messaging</h1>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block content %}
+    <h1 id="test">Hi, {{ user.username }}!</h1>
+    {% for post in posts %}
+    <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+{% endblock %}

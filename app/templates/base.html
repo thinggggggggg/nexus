@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/base.css') }}">
+        {% if title %}
+        <title>{{ title }} - Nexus</title>
+        {% else %}
+        <title>Nexus - Private Messaging</title>
+        {% endif %}
+    </head>
+    <body>
+        <div>Nexus: <a href="/home">Home</a></div>
+        <hr>
+        {% block content %}{% endblock %}
+    </body>
+</html>
