@@ -3,7 +3,6 @@
     border-radius: 10px;
     border-color: #777777;
     font-size: 100%;
-
 }
 
 #submit_field {
@@ -22,7 +21,7 @@
     border-color: #777777;
 }
 
-.loginform form{
+form{
     display: flex;
     width: 99vw;
     height: 50vh;
@@ -36,10 +35,6 @@
     margin: 50px auto;
     padding: 20px;
 }
-
-/* .formwrapper {
-
-} */
 
 .fielditem {
     display: flex;
