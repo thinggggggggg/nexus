@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 
+{% block extraheader %}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/login.css') }}">
+{% endblock extraheader %}
+
 {% block content %}
     <h1 id="main-header" style="font-size: 6vw">Sign In to Nexus</h1>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/login.css') }}">
 
     <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
@@ -25,4 +28,4 @@
     <div class="button-container">
         <button>Sign In</button>
       </div>  -->
-{% endblock %}
+{% endblock content %}
