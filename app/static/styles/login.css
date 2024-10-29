@@ -23,7 +23,7 @@
 
 form{
     display: flex;
-    width: 99vw;
+    width: auto;
     height: 50vh;
     grid-template-columns: 1fr;
     border-style: dashed;
