@@ -1,5 +1,62 @@
-.chat-container {
-    /* display: flex;
+#input_field {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #777777;
+    font-size: 100%;
+
+}
+
+#submit_field {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #777777;
+}
+
+#boolean_field {
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #777777;
+}
+
+.loginform form{
+    display: flex;
+    width: 99vw;
+    height: 50vh;
+    grid-template-columns: 1fr;
+    border-style: dashed;
+    border-color: black;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    text-align: center;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* .formwrapper {
+
+} */
+
+.fielditem {
+    display: flex;
+    flex-direction: column;
+    max-width: 20vw;
+    margin: 5px;
+}
+
+.fielditem ::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 100%;
+}
+
+/* .chat-container {
+    display: flex;
     flex: content;
     flex-direction: column;
     border-color: #333;
@@ -10,7 +67,7 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-    margin: 0 auto; */
+    margin: 0 auto;
     
     display: inline-flex;
     flex-direction: column;
@@ -19,7 +76,7 @@
     border-radius: 10px;
     align-items: center;
     margin: 0 auto;
-    padding: 5px; /* Optional: adds spacing inside container */
+    padding: 5px;
 }
 
 .button-container {
@@ -62,4 +119,4 @@ button {
 
 button:hover {
     background-color: #6da7c1;
-}
+} */
