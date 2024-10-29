@@ -1,0 +1,65 @@
+.chat-container {
+    /* display: flex;
+    flex: content;
+    flex-direction: column;
+    border-color: #333;
+    border-style: dotted;
+    border-radius: 10px;
+    height: 10vw;
+    width: 700px;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto; */
+    
+    display: inline-flex;
+    flex-direction: column;
+    border-color: #333;
+    border-style: dotted;
+    border-radius: 10px;
+    align-items: center;
+    margin: 0 auto;
+    padding: 5px; /* Optional: adds spacing inside container */
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    border-color: #333;
+    border-style: dotted;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+
+#input-box {
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.1);
+    align-self: center;
+    width: 20vw;
+    justify-content: center;
+}
+
+button {
+    padding: 10px 20px;
+    font-family: "Barlow Condensed", sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    color: #000000;
+    background-color: #89CFF0;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #6da7c1;
+}

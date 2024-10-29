@@ -1,27 +1,28 @@
 {% extends "base.html" %}
 
 {% block content %}
-    <h1 id="main-header" style="font-size: 6vw">Sign In</h1>
+    <h1 id="main-header" style="font-size: 6vw">Sign In to Nexus</h1>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/login.css') }}">
 
-    <!-- <form action="" method="post" novalidate>
+    <form action="" method="post" novalidate>
         {{ form.hidden_tag() }}
-        <p>
-            {{ form.username.label }}<br>
-            {{ form.username(size=32) }}
-        </p>
-        <p>
-            {{ form.password.label }}<br>
-            {{ form.password(size=32) }}
-        </p>
+        <div class="chat-container">
+            <!-- {{ form.username.label}}<br> -->
+            {{ form.username(class="input-box", placeholder="Username") }}
+    
+            <!-- {{ form.password.label }}<br> -->
+            {{ form.password(class="input-box", placeholder="Password") }}
+        </div>
         <p>{{ form.remember_me() }} {{ form.remember_me.label }}</p>
         <p>{{ form.submit() }}</p>
-    </form> -->
+    </form>
 
-    <div class="chat-container">
+    <!-- <div class="chat-container" style="width: 100vw;"> -->
         <!-- Input area -->
-        <div id="inputContainer" class="input-container">
-          <input type="text" id="inputBox" placeholder="Username">
-          <!-- <button onclick="send_message()">Send</button> -->
-        </div>
-      </div>
+        <!-- <input type="text" id="input-box" placeholder="Username">
+        <input type="password" id="input-box" placeholder="Password">
+    </div>
+    <div class="button-container">
+        <button>Sign In</button>
+      </div>  -->
 {% endblock %}
