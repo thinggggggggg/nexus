@@ -26,6 +26,18 @@ def login():
     form = LoginForm()  # currently uses flask stuff but ngl looks bad so gonna fix
     return render_template('login.html', title='Sign In', form=form)
 
-@app.route('/messages')
-def messages():
+@app.route('/privacy')
+def privacy():
+    pass
+
+@app.route('/blog')
+def blog():
+    pass
+
+@app.route('/nexus-online')
+def nexus_online():
     user = USER
+
+@app.route('/contact-us')
+def contact_us():
+    pass
