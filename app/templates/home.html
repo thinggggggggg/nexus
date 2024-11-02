@@ -1,6 +1,22 @@
 {% extends "base.html" %}
 
+{% block extraheader %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/home.css') }}">
+{% endblock extraheader %}
+
 {% block content %}
-<h1><span class="text-emphasis">Nexus.</span><span class="text-background"><br>
-    Messaging made more</span> simple.</h1> <!-- header message -->
+<h1> <!-- header message -->
+<div class="text-emphasis">Nexus.</div>
+<div id="title-container">Messaging made more
+    <div id="word-container">
+        <div id=scroll-text>
+            &nbsp<br>
+            &nbspsecure.<br>
+            &nbspsimple.<br>
+            &nbspsmart.<br>
+            .
+        </div>
+    </div>
+</div>
+</h1>
 {% endblock content%}

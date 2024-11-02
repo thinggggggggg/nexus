@@ -36,12 +36,10 @@ h1 {
 
 .text-emphasis {
     color: var(--accent-color);
-    font-size: min(12.5vh, 10vw);
 }
 
 .text-background {
     color: var(--secondary-font-color);
-    font-size: min(12.5vh, 10vw);
 }
 
 body {
