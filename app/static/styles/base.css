@@ -1,9 +1,16 @@
+html {
+    --background-color: #89CFF0;
+    --border-color: #464646;
+    --primary-font-color: #000000;
+
+}
+
 h1 {
     font-family: "Barlow Condensed", sans-serif;
     font-weight: 600;
     font-style: normal;
     font-size: 6vw;
-    background-color: #89CFF0;
+    background-color: var(--background-color);
     border-radius: 30px;
     text-align: center;
     padding: 1%;
@@ -23,10 +30,9 @@ h1 {
 #nav-button {
     text-align: center;
     border-style: solid;
-    border-color: black;
+    border-color: var(--border-color);
     border-radius: 10px;
     padding: 3px;
-
 }
 
 body {
@@ -36,4 +42,5 @@ body {
     font-size: 100%;
     padding: 0;
     margin: 0;
+    color: var(--primary-font-color)
 }
