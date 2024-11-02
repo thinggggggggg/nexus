@@ -1,22 +1,38 @@
-html {
-    --background-color: #89CFF0;
-    --border-color: #464646;
-    --primary-font-color: #000000;
-
+:root {
+    --accent-color: #89BFF0;
+    --accent-color-2: #9e9e9e;
+    --accent-color-darker: #7D9FF0;
+    --border-color: #9e9e9e;
+    --primary-font-color: #ffffff;
+    --background-colour: #3b3b3b;
+    --button-hover-color: #5a5946;
+    --rounding: 20px;
+    --font-body: "Outfit", sans-serif;
 }
 
 h1 {
-    font-family: "Barlow Condensed", sans-serif;
+    font-family: "Inter", serif;
     font-weight: 600;
-    font-style: normal;
-    font-size: 6vw;
-    background-color: var(--background-color);
-    border-radius: 30px;
     text-align: center;
-    padding: 1%;
     margin-top: 0;
     margin-left: 1%;
     margin-right: 1%;
+    font-size: 96px;
+}
+
+.text-emphasis {
+    color: var(--accent-color)
+}
+
+body {
+    font-family: "Outfit", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 100%;
+    padding: 0;
+    margin: 0;
+    color: var(--primary-font-color);
+    background-color: var(--background-colour);
 }
 
 #nav-bar {
@@ -24,23 +40,35 @@ h1 {
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 1%;
+    margin-top: 5px;
+    margin-bottom: 0;
+    background-color: var(--accent-color);
+    border-radius: 20px;
+    padding-bottom: 3vh;
+    height: auto;
+    font-size: auto;
+    margin-left: 1%;
+    margin-right: 1%;
 }
 
-#nav-button {
+.nav-button {
     text-align: center;
-    border-style: solid;
-    border-color: var(--border-color);
-    border-radius: 10px;
-    padding: 3px;
+    /* border: solid var(--border-color); */
+    border-radius: 8px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    color: inherit;
+    text-decoration: inherit;
+    background-color: var(--accent-color-2);
+    transition: 0.4s ease;
+    margin: 1vw;
+    font-size: 32px;
+
 }
 
-body {
-    font-family: "Montserrat", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 100%;
-    padding: 0;
-    margin: 0;
-    color: var(--primary-font-color)
+.nav-button:hover {
+    /* background-color: #9bf8d9; */
+    background-color: var(--accent-color);
 }
