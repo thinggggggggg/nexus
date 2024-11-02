@@ -1,8 +1,6 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>Welcome to Nexus, {{ user.username }}!</h1> <!-- header message -->
-{% for message in messages %}
-<div><p>{{ message.author.username }} says: <b>{{ message.body }}</b></p></div> <!-- displaying all messages -->
-{% endfor %}
-{% endblock content %}
+<h1><span class="text-emphasis">Nexus.</span><span class="text-background"><br>
+    Messaging made more</span> simple.</h1> <!-- header message -->
+{% endblock content%}

@@ -48,3 +48,8 @@ def nexus_online():
 def contact_us():
     pass
     return contact_us()
+
+@app.route('/welcome')
+def welcome():
+    pass
+    return welcome()
