@@ -3,28 +3,59 @@ form{
     flex-direction: column;
     width: auto;
     height: 50vh;
-    border-style: dashed;
-    border-color: black;
     align-items: center;
     justify-content: center;
     position: relative;
     text-align: center;
     margin: 50px auto;
     padding: 20px;    
+    min-width: fit-content;
+    max-width: 50vw;
+    background-color: var(--background-color);
+    border-radius: var(--rounding);
 }
 
-/* form_item tag created in forms.py */
-#form_item { 
+.form-field {
+    border: solid white;
+    display: grid;
+}
+
+.form-item { 
     font-family: var(--font-body);
     font-weight: var(--font-weight);
     font-size: 100%;
+    text-align: center;
+    background-color: white;
 
-    border-style: solid;
     border-radius: var(--rounding);
-    border-color: var(--border-color);
+    /* border: solid var(--border-color); */
+    border: none;
 
-    max-width: 20vw;
+    width: 40vw;
     margin: 5px;
+    padding: 5px;
+    transition: 0.4s ease;
+    cursor: pointer;
+}
+
+.form-item:hover {
+    background-color: var(--accent-color-2);
+}
+
+#username-entry {
+    visibility: visible;
+}
+
+#password-entry {
+    visibility: hidden;
+}
+
+#submit-entry {
+    visibility: hidden;
+}
+
+#next-entry {
+    visibility: visible;
 }
 
 .toggle-switch-container {
@@ -32,14 +63,15 @@ form{
     align-items: center;
     gap: 10px;
     margin: 10px 0;
+    visibility: hidden;
 }
 
 /* Hide the default checkbox appearance */
-#boolean_form_item {
+#boolean-form-item {
     appearance: none;  /* Remove default checkbox style */
     width: 50px;
     height: 24px;
-    background-color: #ccc;
+    background-color: var(--border-color);
     border-radius: 12px;
     position: relative;
     outline: none;
@@ -48,7 +80,7 @@ form{
 }
 
 /* Circle inside the toggle switch */
-#boolean_form_item::before {
+#boolean-form-item::before {
     content: '';
     position: absolute;
     top: 2px;
@@ -61,10 +93,10 @@ form{
 }
 
 /* Toggle switch appearance when checked */
-#boolean_form_item:checked {
-    background-color: #4CAF50;
+#boolean-form-item:checked {
+    background-color: var(--accent-color-darker);
 }
 
-#boolean_form_item:checked::before {
+#boolean-form-item:checked::before {
     transform: translateX(26px);
 }

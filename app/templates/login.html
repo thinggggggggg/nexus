@@ -5,32 +5,32 @@
 {% endblock extraheader %}
 
 {% block content %}
-<h1>Sign In to Nexus</h1>
+<h1>Sign in <span class="text-background">to</span><span class="text-emphasis"> Nexus Web</span></h1>
 
 <form action="" method="post" novalidate>
     {{ form.hidden_tag() }} <!-- security: csurf protection -->
 
-    <div>
-        {{ form.username(placeholder="Username") }}
+    <div class="form-field">
+        {{ form.username(placeholder="Phone number, email, or username", class_="form-item") }}
 
         {% for error in form.username.errors %}
         <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
-    </div>
 
-    <div>
-        {{ form.password(placeholder="Password") }}
+        {{ form.password(placeholder="Password", class_="form-item") }}
 
         {% for error in form.password.errors %}
         <span style="color: red;">[{{ error }}]</span>
         {% endfor %}
-    </div>
 
-    <div class="toggle-switch-container">
-        {{ form.remember_me() }} {{ form.remember_me.label }}
-    </div>
+        <div class="toggle-switch-container">
+            {{ form.remember_me() }} {{ form.remember_me.label }}
+        </div>
 
-    <p>{{ form.submit() }}</p>
+    <p>{{ form.next(style="padding: 10px;", class_="form-item") }}
+        {{ form.submit(style="padding: 10px;", class_="form-item") }}
+    </p>
+    </div>
 </form>
 
 {% endblock content %}
