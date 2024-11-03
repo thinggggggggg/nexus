@@ -1,7 +1,7 @@
 form{
     display: flex;
     flex-direction: column;
-    width: auto;
+    width: 50vw;
     height: 50vh;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,9 @@ form{
 
 .form-field {
     border: solid white;
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 .form-item { 
@@ -31,7 +33,7 @@ form{
     /* border: solid var(--border-color); */
     border: none;
 
-    width: 40vw;
+    width: auto;
     margin: 5px;
     padding: 5px;
     transition: 0.4s ease;
@@ -56,6 +58,7 @@ form{
 
 #next-entry {
     visibility: visible;
+    align-self: right;
 }
 
 .toggle-switch-container {

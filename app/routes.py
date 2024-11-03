@@ -17,9 +17,7 @@ MESSAGES = [
 @app.route('/')
 @app.route('/home')
 def home():
-    user = USER
-    messages = MESSAGES
-    return render_template('home.html', title='Home', user=user, messages=messages)
+    return render_template('home.html', title='Home')
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
@@ -31,25 +29,23 @@ def login():
 
 @app.route('/privacy')
 def privacy():
-    pass
-    return privacy()
+    return render_template('privacy.html', title='Privacy')
 
 @app.route('/blog')
 def blog():
-    pass
-    return blog()
+    return render_template('blog.html', title='Blog')
 
 @app.route('/nexus-online')
 def nexus_online():
     user = USER
-    return nexus_online()
+    return render_template('webapp.html', title='Nexus Online')
 
 @app.route('/contact-us')
 def contact_us():
-    pass
-    return contact_us()
+    return render_template('contact.html', title='Contact Us')
 
 @app.route('/welcome')
 def welcome():
-    pass
-    return welcome()
+    user = USER
+    messages = MESSAGES
+    return render_template('welcome.html', user=user, messages=messages)

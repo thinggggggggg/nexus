@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{% block extraheader %}
+<link rel= "stylesheet" type= "text/css" href= "{{ url_for('static', filename='styles/webapp.css') }}">
+{% endblock extraheader %}
+
+{% block content %}
+<h1>Nexus Online</h1>
+{% for message in messages %}
+<div><p>{{ message.author.username }} says: <b>{{ message.body }}</b></p></div> <!-- displaying all messages -->
+{% endfor %}
+{% endblock content %}

@@ -6,6 +6,13 @@
 
 {% block content %}
 <h1> <!-- header message -->
+<script>
+    // Wait until the page is fully loaded, then add the "start-animation" class to <body>
+    window.addEventListener('load', () => {
+        document.body.classList.add('start-animation');
+    });
+</script>
+
 <div class="text-emphasis">Nexus.</div>
 <div id="title-container">
     Messaging&nbsp<div id="word-container">made&nbsp</div>
