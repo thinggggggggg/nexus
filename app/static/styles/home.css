@@ -43,42 +43,65 @@
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
     
-    -moz-animation: scroll-text 6s ease-out forwards;
-    /* -moz-animation-delay: 0.1s; */
-    -webkit-animation: scroll-text 6s ease-out forwards;
-    /* -webkit-animation-delay: 0.1s; */
-    animation: scroll-text 6s ease-out forwards;
-    /* animation-delay: 0.1s; */
+    -moz-animation: scroll-text 15s ease infinite;
+    -webkit-animation: scroll-text 15s ease infinite;
+    animation: scroll-text 15s ease infinite;
 
-    animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+    animation-play-state: paused;  /* set paused by default, plays when elements are loaded. see <script> in home.html */
   }
   
-  /* for Firefox */
-  @-moz-keyframes scroll-text {
-    from { -moz-transform: translateY(25%); }
-    to { -moz-transform: translateY(-80%); }
-  }
-  
-  /* for Chrome */
-  @-webkit-keyframes scroll-text {
-    from { -webkit-transform: translateY(25%); }
-    to { -webkit-transform: translateY(-80%); }
-  }
-  
-  @keyframes scroll-text {
-    from {
-      -moz-transform: translateY(25%);
-      -webkit-transform: translateY(25%);
-      transform: translateY(25%);
-    }
-    to {
-      -moz-transform: translateY(-80%);
-      -webkit-transform: translateY(-80%);
-      transform: translateY(-80%);
-    }
+/* Firefox-specific keyframes */
+@-moz-keyframes scroll-text {
+  0% { -moz-transform: translateY(25%);}
+  40%, 89% { -moz-transform: translateY(-75%);}
+  90% {opacity: 0;}
+  100% { -moz-transform: translateY(-100%);}
+}
 
+/* Chrome-specific keyframes */
+@-webkit-keyframes scroll-text {
+  0% { -webkit-transform: translateY(25%);}
+  40%, 89% { -webkit-transform: translateY(-75%);}
+  90% {opacity: 0;}
+  100% { -webkit-transform: translateY(-100%);}
+}
+
+@keyframes scroll-text {
+  0% {
+    -moz-transform: translateY(25%);
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%);
   }
+  40%, 80% {
+    -moz-transform: translateY(-75%);
+    -webkit-transform: translateY(-75%);
+    transform: translateY(-75%);
+    opacity: 1;
+  }
+  81% {
+    opacity: 0;
+  }
+  100% {
+    -moz-transform: translateY(25%);
+    -webkit-transform: translateY(25%);
+    transform: translateY(25%);
+    opacity: 0;
+  }
+
+}
 
 .start-animation #scroll-text {
   animation-play-state: running;
+}
+
+#scroll-text-reverse {
+  -moz-animation: scroll-text 5s ease-out reverse;
+  -webkit-animation: scroll-text 5s ease-out reverse;
+  animation: scroll-text 5s ease-out reverse;
+
+  -moz-animation-play-state: paused;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused;  /* set paused by default, plays when elements are loaded. see <script> in home.html */
 }
