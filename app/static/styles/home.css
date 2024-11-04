@@ -43,9 +43,9 @@
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
     
-    -moz-animation: scroll-text 15s ease infinite;
-    -webkit-animation: scroll-text 15s ease infinite;
-    animation: scroll-text 15s ease infinite;
+    -moz-animation: scroll-text 20s ease infinite;
+    -webkit-animation: scroll-text 20s ease infinite;
+    animation: scroll-text 20s ease infinite;
 
     -moz-animation-play-state: paused;
     -webkit-animation-play-state: paused;
@@ -55,17 +55,17 @@
 /* Firefox-specific keyframes */
 @-moz-keyframes scroll-text {
   0% { -moz-transform: translateY(25%);}
-  40%, 89% { -moz-transform: translateY(-75%);}
-  90% {opacity: 0;}
-  100% { -moz-transform: translateY(-100%);}
+  30%, 80% { -moz-transform: translateY(-75%); opacity: 1;}
+  81% {opacity: 0;}
+  100% { -moz-transform: translateY(25%); opacity: 0;}
 }
 
 /* Chrome-specific keyframes */
 @-webkit-keyframes scroll-text {
-  0% { -webkit-transform: translateY(25%);}
-  40%, 89% { -webkit-transform: translateY(-75%);}
-  90% {opacity: 0;}
-  100% { -webkit-transform: translateY(-100%);}
+  0% {-webkit-transform: translateY(25%);}
+  30%, 80% {-webkit-transform: translateY(-75%); opacity: 1;}
+  81% {opacity: 0;}
+  100% {-webkit-transform: translateY(25%); opacity: 0;}
 }
 
 @keyframes scroll-text {
@@ -74,7 +74,7 @@
     -webkit-transform: translateY(25%);
     transform: translateY(25%);
   }
-  40%, 80% {
+  30%, 80% {
     -moz-transform: translateY(-75%);
     -webkit-transform: translateY(-75%);
     transform: translateY(-75%);
