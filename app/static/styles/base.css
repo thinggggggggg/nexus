@@ -1,13 +1,13 @@
 :root {
-    --accent-color: #89BFF0;
-    --accent-color-2: #acacac;
-    --accent-color-darker: #7D9FF0;
-    --border-color: #acacac;
-    --primary-font-color: #ffffff;
-    --secondary-font-color: #acacac;
-    --background-color: #3b3b3b;
-    --background-gradient: linear-gradient(to top, #89bff0 0%, #3b3b3b 100%);
-    --button-hover-color: #5a5946;
+    --accent-color: hwb(209 54% 6%);
+    --accent-color-2: hwb(0 67% 33%);
+    --accent-color-darker: hwb(222 49% 6%);
+    --border-color: hwb(0 67% 33%);
+    --primary-font-color: hwb(0 100% 0%);
+    --secondary-font-color: hwb(0 67% 33%);
+    --background-color: hwb(0 23% 77%);
+    --background-gradient: linear-gradient(to top, var(--accent-color) 0%, var(--background-color) 100%);
+    --button-hover-color: hwb(57 27% 65%);
     --rounding: 10px;
     --font-body: "Outfit", sans-serif;
 }
@@ -30,9 +30,9 @@ h1 {
     margin-top: 0;
     margin-left: 1%;
     margin-right: 1%;
-    font-size: min(12.5vh, 10vw);
+    font-size: max(2vw, 2.5vh);
     font-feature-settings: "liga" 0;
-    letter-spacing: -0.04em;
+    letter-spacing: -0.3vw;
 }
 
 .text-emphasis {
@@ -65,6 +65,7 @@ body {
     border-radius: 20px;
     margin-left: 1%;
     margin-right: 1%;
+    height: fit-content;
 }
 
 .nav-button {
@@ -79,7 +80,7 @@ body {
     background-color: var(--accent-color);
     transition: 0.4s ease;
     margin: 1vw;
-    font-size: 20px;
+    font-size: max(1.75vw, 2.25vh);
 
 }
 
