@@ -58,6 +58,10 @@
     -moz-transform: translateY(0%);
     -webkit-transform: translateY(0%);
     transform: translateY(0%);
+
+    -moz-animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+    animation-delay: 0.3s;
     
     -moz-animation: scroll-text 20s ease infinite;
     -webkit-animation: scroll-text 20s ease infinite;
