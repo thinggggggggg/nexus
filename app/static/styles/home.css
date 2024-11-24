@@ -1,13 +1,13 @@
-#full-container {
-  display: flex;
-  flex-direction: row;
-  row-gap: 0px;
-  height: auto;
-  align-content: flex-start;
-  /* border: green dashed; */
+#page-container {
+    border: blue dashed;
+    display: grid;
+    overflow: visible;
+    align-items: start;
+    grid-auto-rows: max-content;
+    position: relative;
 }
 
-#title-container {
+.title-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -19,9 +19,14 @@
     max-width: 100vw;
     row-gap: 0px;
     height: min(12.5vh, 10vw);
-    /* border: green solid; */
+    border: green solid;
+    margin: 1%;
     margin-bottom: 0;
     align-items: last baseline;
+}
+
+#body-container {
+  border: yellow solid;
 }
 
 #word-container {
@@ -46,6 +51,8 @@
 
 #scroll-word-container {
     height: min(12.5vh, 10vw);
+    /* border: black dashed; */
+    align-self: baseline;
     overflow: hidden;
 }
 
@@ -116,12 +123,12 @@
   animation-play-state: running;
 }
 
-#scroll-text-reverse {
+/* #scroll-text-reverse {
   -moz-animation: scroll-text 5s ease-out reverse;
   -webkit-animation: scroll-text 5s ease-out reverse;
   animation: scroll-text 5s ease-out reverse;
 
   -moz-animation-play-state: paused;
-  -webkit-animation-play-state: paused;
-  animation-play-state: paused;  /* set paused by default, plays when elements are loaded. see <script> in home.html */
-}
+  -webkit-animation-play-state: paused; */
+  /* animation-play-state: paused;  /* set paused by default, plays when elements are loaded. see <script> in home.html */
+/*} */
